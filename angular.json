@@ -24,15 +24,20 @@
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/assets/styles/slick",
+                            "src/assets/js"
                         ],
                         "styles": [
                             "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "src/assets/styles/slick/slick.css",
+                            "src/assets/styles/slick/slick-theme.css"
                         ],
                         "scripts": [
                             "./node_modules/jquery/dist/jquery.js",
-                            "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+                            "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+                            "src/assets/js/slick.js"
                         ]
                     },
                     "configurations": {

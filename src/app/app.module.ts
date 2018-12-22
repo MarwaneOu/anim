@@ -10,6 +10,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { MainComponent } from './component/main/main.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { ContainerComponent } from './component/container/container.component';
+import { SlickModule } from 'ngx-slick';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { ContainerComponent } from './component/container/container.component';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    SlickModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

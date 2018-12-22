@@ -1,23 +1,11 @@
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-        <img [src]="images[0]" alt="Random first slide">
-        <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+<div class="card" style="min-height: auto; margin:10px 0">
+    <div class="wrap-accounts">
+        <div class="carousel-wrap">
+            <ngx-slick class="carousel Slick-carousel owl-carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+                <div ngxSlickItem *ngFor="let slide of images" class="slide">
+                    <img src="{{ slide }}" alt="" width="100%">
+                </div>
+            </ngx-slick>
         </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <img [src]="images[1]" alt="Random second slide">
-        <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <img [src]="images[2]" alt="Random third slide">
-        <div class="carousel-caption">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-    </ng-template>
-</ngb-carousel>
+    </div>
+</div>
