@@ -8,17 +8,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MainComponent } from './component/main/main.component';
-import { CarouselComponent } from './component/carousel/carousel.component';
 import { ContainerComponent } from './component/container/container.component';
-import { SlickModule } from 'ngx-slick';
+import { CardComponent } from './component/container/component/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './services/authanime.services';
+import { AnimesService } from './services/getanimes.secvices';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    CarouselComponent,
-    ContainerComponent
+    ContainerComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -26,9 +28,9 @@ import { SlickModule } from 'ngx-slick';
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    SlickModule.forRoot()
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService, AnimesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
