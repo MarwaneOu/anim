@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -6,11 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input('image') _image;
-  constructor() { }
+  @Input('anime') _anime;
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    console.log('images', this._image)
+    console.log('images', this._anime)
+  }
+  watch(id) {
+    this.router.navigate([`video/${id}`])
   }
 
 }

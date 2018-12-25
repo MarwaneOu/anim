@@ -1,8 +1,8 @@
 <div class="card" style="width: 18rem;">
-    <img class="card-img-top" [src]="_image" alt="Card image cap">
+    <img class="card-img-top" [src]="_anime.ImageUrl" alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">{{_anime.Name}}</h5>
+        <p class="card-text">{{_anime.Episode}}</p>
+        <a (click)="watch(_anime.Id)" class="btn btn-primary">Watch</a>
     </div>
 </div>

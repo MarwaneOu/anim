@@ -7,15 +7,13 @@ import { AnimesService } from 'src/app/services/getanimes.secvices';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  images
+  animes
   constructor(private animServices: AnimesService) { }
 
   ngOnInit() {
     this.animServices.getanimes().subscribe(resul => {
       let at = Object.keys(resul)[0]
-      this.images = resul[at].map(function (el) {
-        return el.ImageUrl
-      });
+      this.animes = resul[at]
     })
   }
 
